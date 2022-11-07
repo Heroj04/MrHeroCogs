@@ -9,16 +9,16 @@ class Scryfall(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def mycom(self, ctx:commands.Context, name: str):
-        """This does stuff!"""
+    async def scryfall(self, ctx:commands.Context, name: str):
+        """Search for a card"""
         # Trigger typing to indicate web request
         ctx.trigger_typing()
         card = {}
         
         try:
             card = scrython.Named(fuzzy = name)
-        except:
-            await ctx.send("Card not found")
+        except Exception as e:
+            await ctx.send(f"Card not found: {str(e)}")
             return
 
         await ctx.send(card.oracle_text)

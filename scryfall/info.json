@@ -1,0 +1,10 @@
+{
+    "author" : ["Mr Hero#6252"],
+    "install_msg" : "Thank you for downloading this cog.",
+    "name" : "scryfall",
+    "short" : "Search Scryfall database.",
+    "description" : "This cog allows searching for Magic: The Gathering card information using the Scryfall API.",
+    "tags" : ["tools"],
+    "requirements" : ["scrython"],
+    "hidden" : false
+}
